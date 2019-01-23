@@ -36,7 +36,6 @@ describe("2. About Functions", () => {
     expect(parentfunction()).toBe('local');
   });
 
-  //ARGUMENTS IS NOT DEFINED
   it("should use lexical scoping to synthesise functions", () => {
     makeMysteryFunction = makerValue => {
       const newFunction = function doMysteriousThing(param) {
@@ -51,6 +50,7 @@ describe("2. About Functions", () => {
     expect(mysteryFunction3(10) + mysteryFunction5(5)).toBe(23);
   });
 
+  //ARGUMENTS IS NOT DEFINED
   it("should allow extra function arguments", () => {
     const returnFirstArg = firstArg => {
       return firstArg;
