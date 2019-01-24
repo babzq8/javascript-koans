@@ -43,13 +43,13 @@ describe("3. About Objects", () => {
       mastermind: "James Wood",
       henchman: "Adam West",
       birthYear: 1970,
-      calculateAge: () => {
+      calculateAge: function() {
         return currentYear - this.birthYear;
       }
     };
 
     expect(currentYear).toBe(2019);
-    expect(megalomaniac.calculateAge()).toBe(NaN);
+    expect(megalomaniac.calculateAge()).toBe(49);
   });
 
   it("should know that properties can be added and deleted", () => {
