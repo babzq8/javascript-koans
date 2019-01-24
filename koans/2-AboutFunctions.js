@@ -64,7 +64,7 @@ describe("2. About Functions", () => {
 
     expect(returnSecondArg("only give first arg")).toBe(undefined);
 
-    const returnAllArgs = () => {
+    const returnAllArgs = (...arguments) => {
       let argsArray = [];
       for (let i = 0; i < arguments.length; i += 1) {
         argsArray.push(arguments[i]);
