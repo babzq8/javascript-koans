@@ -73,8 +73,8 @@ describe("5. About Higher Order Functions", () => {
       name: "louis",
       age: 35
     }];
-    const peopleOverFourty = people.filter(function(x) {
-      return FILL_ME_IN;
+    const peopleOverFourty = people.filter(person => {
+      return person.age > 40;
     });
 
     expect(peopleOverFourty).toEqual([{
@@ -101,8 +101,8 @@ describe("5. About Higher Order Functions", () => {
       name: "louis",
       age: 35
     }];
-    const names = people.map(function(x) {
-      return FILL_ME_IN;
+    const names = people.map(person => {
+      return person.age;
     });
 
     expect(names).toEqual([41, 22, 47, 35]);
@@ -131,7 +131,8 @@ describe("5. About Higher Order Functions", () => {
     // turn the array back into a string
 
     const jadenCase = function(string) {
-      return FILL_ME_IN;
+      let words = string.split(' ');
+      return words;
     };
 
     expect(jadenCase("How can mirrors be real if our eyes aren't real")).toEqual("How Can Mirrors Be Real If Our Eyes Aren't Real");
