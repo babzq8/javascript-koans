@@ -36,23 +36,30 @@ describe("7. About Applying What We Have Learnt", () => {
   it("given I'm allergic to nuts and hate mushrooms, it should find a pizza I can eat (functional)", () => {
 
     let productsICanEat = [];
+    productsICanEat.push(products.filter(x => x.containsNuts === false).some(x => x.ingredients !== 'mushrooms'));
 
     /* solve using filter() & some() / every() */
 
-    expect(productsICanEat.length).toBe(FILL_ME_IN);
+    expect(productsICanEat.length).toBe(1);
   });
   /*********************************************************************************/
 
   // EXTRA CHALLENGES
   it("should find the largest palindrome made from the product of two 3 digit numbers", () => {
     const isPalidrome = function(item) {
-      // a palindrome is a string that is the same forwards and backwards
-      return FILL_ME_IN;
+      return item.toString() == [...item.toString()].reverse().join('');
     };
 
     const largestPalidrome = () => {
-      let listOfAllThreeDigitNumbers = [FILL_ME_IN];
-      return FILL_ME_IN;
+      let largestPal = 0;
+      for (i = 999; i >= 100; i--) {
+        for (j = 999; j >= 100; j--) {
+          if ((isPalidrome(i*j)) && ((i * j) > largestPal)) {
+            largestPal = i * j;
+          }
+        }
+      }
+      return largestPal;
     };
     largestPalidrome();
     
