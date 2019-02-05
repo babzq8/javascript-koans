@@ -115,8 +115,8 @@ describe("5. About Higher Order Functions", () => {
     // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
     const arrayDiff = function(array1, array2) {
-      return array1.filter(() => {
-        return FILL_ME_IN;
+      return array1.filter(function(curVal){
+        return array2.indexOf(curVal) < 0;
       });
     };
 
